@@ -1,1 +1,1 @@
-# SafariDAO
+# WakandaDAO
