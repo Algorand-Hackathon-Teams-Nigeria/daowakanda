@@ -1,1 +1,1 @@
-# WakandaDAO
+# DAOWakanda
