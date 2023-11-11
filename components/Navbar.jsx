@@ -16,7 +16,12 @@ import AdbIcon from "@mui/icons-material/Adb";
 import Image from "next/image";
 import ConnectWalletModal from "./modals/ConnectWalletModal";
 
-const pages = ["Logs", "Projects", "Resources", "About"];
+const pages = [
+  { name: "Logs", href: "/users" },
+  { name: "Projects", href: "/projects" },
+  { name: "Resources", href: "/resources" },
+  { name: "About", href: "/about" },
+];
 
 function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState();
@@ -96,7 +101,9 @@ function NavBar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center" href="/users">{page}</Typography>
+                  <Typography textAlign="center" href={page.href}>
+                    {page.name}
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -127,10 +134,10 @@ function NavBar() {
               justifyContent: "center",
             }}
           >
-            {pages.map((page) => (
+            {pages.map((page, index) => (
               <Button
-                key={page}
-                href="/users"
+                key={`${page.name}-${index}`}
+                href={page.href}
                 sx={{
                   my: 2,
                   color: "white",
@@ -140,16 +147,14 @@ function NavBar() {
                   fontSize: 18,
                 }}
               >
-                {page}
+                <Typography>{page.name}</Typography>
               </Button>
             ))}
           </Box>
 
-          <Box
-            sx={{ flexGrow: 0, bgcolor: "#666", borderRadius: 10 }}
-          >
+          <Box sx={{ flexGrow: 0, bgcolor: "#666", borderRadius: 10 }}>
             <Tooltip title="Connect Wallet">
-              <IconButton onClick={toggleModal} sx={{ padding: 2, }}>
+              <IconButton onClick={toggleModal} sx={{ padding: 2 }}>
                 <Image
                   src="/wallet.svg"
                   className="w-6 h-6 relative"

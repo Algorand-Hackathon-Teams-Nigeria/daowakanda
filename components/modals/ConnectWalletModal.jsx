@@ -49,7 +49,7 @@ const ConnectWalletModal = ({ open, toggle }) => {
               <Typography>Supported Wallets</Typography>
 
               <Box mt={5}>
-                {supportedWallets.map((wallet) => (
+                {supportedWallets.map((wallet, index) => (
                   <Box
                     sx={{
                       display: "flex",
@@ -57,6 +57,7 @@ const ConnectWalletModal = ({ open, toggle }) => {
                       mt: 2,
                       width: 200,
                     }}
+                    key={`${wallet.name}-${index}`}
                   >
                     <Image
                       src={wallet.logo}

@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Divider, Grid, OutlinedInput, Typography } from "@mui/material";
 import Image from "next/image";
+import SearchBar from "@/components/SearchBar";
 
 const UsersRow = ({ user, action, time, picture }) => {
   return (
@@ -21,7 +22,9 @@ const UsersRow = ({ user, action, time, picture }) => {
               width={50}
               height={10}
             />
-            <Typography width={"20%"} ml={1}>{user}</Typography>
+            <Typography width={"20%"} ml={1}>
+              {user}
+            </Typography>
           </Box>
           <Typography ml={5} width="60%">
             {action}
@@ -95,19 +98,9 @@ const Users = () => {
         m="auto"
         mt={2}
       >
-        <OutlinedInput
-          placeholder="Search by user, project name and action..."
-          variant="outlined"
-          fullWidth
-          sx={{
-            borderRadius: 100,
-            borderColor: "#fff",
-            borderWidth: 2,
-            color: "#fff",
-            bgcolor: "#34394b",
-          }}
-        />
+        <SearchBar />
       </Box>
+
       <Box width="80%" m="auto" mt={5}>
         <RowHeaders />
         <Divider sx={{ bgcolor: "white", mt: 1 }} />
