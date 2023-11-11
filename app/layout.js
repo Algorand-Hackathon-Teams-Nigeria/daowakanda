@@ -1,8 +1,6 @@
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
-import StakeAlgo from '@/components/StakeAlgo'
-import StakedCard from '@/components/StakedCard'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,8 +17,6 @@ export default function RootLayout({ children }) {
         <main className='relative overflow-hidden'>
         {children}
         </main>
-        <StakeAlgo />
-        <StakedCard />
         </body>
         
     </html>
