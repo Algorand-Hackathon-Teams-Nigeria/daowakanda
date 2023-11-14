@@ -15,11 +15,13 @@ import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import Image from "next/image";
 import ConnectWalletModal from "./modals/ConnectWalletModal";
+import Link from "next/link";
 
 const pages = [
-  { name: "Logs", href: "/users" },
-  { name: "Projects", href: "/projects" },
+  { name: "Stake", href: "/stake" },
+  { name: "Vote", href: "/projects" },
   { name: "Resources", href: "/resources" },
+  { name: "Doc", href: "/users" },
   { name: "About", href: "/about" },
 ];
 
@@ -48,24 +50,16 @@ function NavBar() {
     <AppBar position="static" sx={{ backgroundColor: "#34394b" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: "none", md: "flex" },
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          >
-            LOGO
-          </Typography>
+          <Link href={"/"}>
+            <Image
+              src={"./wakandalogo.svg"}
+              className="w-6 h-6 relative"
+              alt="DAO Wakanda logo"
+              width={100}
+              height={50}
+              style={{ width: 100, height: 50 }}
+            />
+          </Link>
 
           <Box
             sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
@@ -108,25 +102,14 @@ function NavBar() {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
-            sx={{
-              mr: 2,
-              display: { xs: "flex", md: "none" },
-              flexGrow: 1,
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          >
-            LOGO
-          </Typography>
+          {/* <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
+          <Image
+            src={"./wakandalogo.svg"}
+            className="w-6 h-6 relative"
+            alt="DAO Wakanda logo"
+            width={50}
+            height={10}
+          /> */}
           <Box
             sx={{
               flexGrow: 1,

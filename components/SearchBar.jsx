@@ -13,7 +13,7 @@ import * as React from "react";
 import MenuItem from "@mui/material/MenuItem";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
-const SearchBarMenu = ({ menuItems }) => {
+export const SearchBarMenu = ({ menuItems }) => {
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef(null);
   const [selectedFilter, setSelectedFilter] = React.useState("All");
@@ -63,6 +63,8 @@ const SearchBarMenu = ({ menuItems }) => {
           sx={{
             textTransform: "capitalize",
             "&:hover": { bgcolor: "#9e9e9e" },
+            bgcolor:"#eee",
+            borderRadius: 10
           }}
         >
           {selectedFilter}
