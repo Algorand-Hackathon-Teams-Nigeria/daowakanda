@@ -7,7 +7,7 @@ const StakeInfoCard = ({ title, secondRowValue, thirdRowValue }) => {
       variant="outlined"
       sx={{
         bgcolor: "#333",
-        width: "23%",
+        width: "40%",
         minHeight: 100,
         borderRadius: 5,
         padding: 2,

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import StakeInfoCard from "@/components/StakeInfoCard";
 import StakedCard from "@/components/StakedCard";
 import {
@@ -32,15 +32,15 @@ const Stake = () => {
         padding={2.5}
         paddingBottom={0}
       >
-        <Typography variant="h5">Vote - Earn Rewards</Typography>
-
-        <Typography variant="h6">Algo: $0.1207</Typography>
+        <Typography variant="h5" color={"#fff"}>
+          Vote - Participate in decision making
+        </Typography>
       </Box>
       <Box padding={2.5} paddingTop={1}>
         <Divider sx={{ bgcolor: "#fff" }} />
       </Box>
       <Box padding={2.5} display={"flex"} justifyContent={"space-between"}>
-        <StakeInfoCard
+        {/* <StakeInfoCard
           title={"Total Staked ALGO"}
           secondRowValue={"50,2422,232 Algo"}
           thirdRowValue={"~39,343,343 USD"}
@@ -50,6 +50,11 @@ const Stake = () => {
           title={"Total Voting Rewards"}
           secondRowValue={"10.322,242 WKD NFT"}
           thirdRowValue={"~8,623,229 USD"}
+        /> */}
+        <StakeInfoCard
+          title={"Your Reward | Claimed "}
+          secondRowValue={"0 WKD NFT"}
+          thirdRowValue={"0 USD"}
         />
 
         <StakeInfoCard
@@ -57,16 +62,21 @@ const Stake = () => {
           secondRowValue={"10%"}
           thirdRowValue={"----"}
         />
-
-        <StakeInfoCard
-          title={"Your Reward | Claimed "}
-          secondRowValue={"0 WKD NFT"}
-          thirdRowValue={"0 USD"}
-        />
       </Box>
+
       <Box p={2.5} pt={0}>
         <Typography fontStyle={"italic"} color={"#999"}>
           Note: Voting on DAO WAKANDA is only available on Algorand chain.
+        </Typography>
+      </Box>
+
+      <Box p={2.5} mt={5} pb={0}>
+        <Typography color={"#fff"} variant="h5">
+          DAO Wakanda is a decentralized autonomous organization, to
+          revolutionize community engagement and participation within Algorand
+          Nigeria. This platform has been designed to create a vibrant ecosystem
+          where contributors and developers are incentivized and rewarded for
+          their invaluable contributions.
         </Typography>
       </Box>
       <Box p={2.5} display={"flex"} justifyContent={"space-between"} mt={5}>
