@@ -18,8 +18,8 @@ import ConnectWalletModal from "./modals/ConnectWalletModal";
 import Link from "next/link";
 
 const pages = [
-  { name: "Stake", href: "/stake" },
-  { name: "Vote", href: "/projects" },
+  { name: "Vote", href: "/stake" },
+  // { name: "Vote", href: "/projects" },
   { name: "Resources", href: "/resources" },
   { name: "Doc", href: "/users" },
   { name: "About", href: "/about" },
