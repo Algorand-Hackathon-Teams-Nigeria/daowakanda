@@ -73,7 +73,7 @@ export const SearchBarMenu = ({ menuItems }) => {
           open={open}
           anchorEl={anchorRef.current}
           role={undefined}
-          placement="bottom-start"
+          placement="top-start"
           transition
           disablePortal
         >
@@ -82,7 +82,7 @@ export const SearchBarMenu = ({ menuItems }) => {
               {...TransitionProps}
               style={{
                 transformOrigin:
-                  placement === "bottom-start" ? "left top" : "left bottom",
+                  placement === "top-start" ? "left top" : "left bottom",
               }}
             >
               <Paper sx={{ zIndex: 1 }}>
