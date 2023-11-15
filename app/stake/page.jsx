@@ -23,7 +23,7 @@ const Stake = () => {
   const [open, setOpen] = React.useState(false);
   const toggleModal = () => setOpen(!open);
   return (
-    <Box>
+    <Box bgcolor={"#1a2118"}>
       <Box
         width={"100%"}
         margin={"auto"}
