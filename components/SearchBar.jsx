@@ -63,8 +63,8 @@ export const SearchBarMenu = ({ menuItems }) => {
           sx={{
             textTransform: "capitalize",
             "&:hover": { bgcolor: "#9e9e9e" },
-            bgcolor:"#eee",
-            borderRadius: 10
+            bgcolor: "#eee",
+            borderRadius: 10,
           }}
         >
           {selectedFilter}
